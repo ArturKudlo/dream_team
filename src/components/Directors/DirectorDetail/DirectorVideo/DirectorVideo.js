@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
 import ModalVideo from 'react-modal-video';
-import 'react-modal-video/scss/modal-video.scss';
 
+import Title from '../../../shared/Title/Title';
+
+import 'react-modal-video/scss/modal-video.scss';
+import './director-video.scss';
 
 const styles = theme => ({
   button: {
@@ -29,9 +31,12 @@ class DirectorVideo extends Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="video-wrapper">
+        <Title 
+          text="Video information"
+        />
         <ModalVideo
-          channel='youtube'
+          channel="youtube"
           isOpen={this.state.isOpen}
           videoId={videoId}
           onClose={this.toggleModal.bind(null, false)}
