@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import DirectorPhoto from './DirectorPhoto/DirectorPhoto';
 import DirectorBiography from './DirectorBiography/DirectorBiography';
 import DirectorVideo from './DirectorVideo/DirectorVideo';
+import DirectorLocation from './DirectorLocation/DirectorLocation';
 import NoResult from '../NoResult/NoResult';
 import { directorsData } from '../../../assets/data';
 
@@ -31,6 +32,9 @@ class DirectorDetail extends Component {
                 videoId={director.video}
               />
               <DirectorBiography />
+              <DirectorLocation
+                location={director.location}
+              />
             </div>
           </div>
       </div>
