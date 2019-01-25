@@ -1,0 +1,13 @@
+.directors-container {
+  height: 100%;   
+  overflow: hidden;
+  margin: 0px;
+  box-sizing: border-box;
+  display: block;
+
+  ul {
+    display: inline-flex;
+    list-style: none;
+  }
+
+}

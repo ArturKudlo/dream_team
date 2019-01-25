@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,8 +15,8 @@ const Header = props => {
             <Link to={'/'} className="header-link">
               Home
             </Link>
-            <Link to={'/artists'} className="header-link">
-              Artists
+            <Link to={'/directors'} className="header-link">
+              Directors
             </Link>
           </Typography>
         </Toolbar>

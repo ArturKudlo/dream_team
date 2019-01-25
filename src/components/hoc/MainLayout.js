@@ -16,4 +16,4 @@ class MainLayout extends Component {
   }
 }
 
-export default MainLayout; 
+export default MainLayout;

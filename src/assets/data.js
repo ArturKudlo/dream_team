@@ -1,4 +1,4 @@
-[
+export const directorsData = [
   {
   "id": 1,
   "name": "Лариса Помпеевна Александровская",
