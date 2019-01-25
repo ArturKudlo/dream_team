@@ -17,16 +17,18 @@ const DirectorItem = props => {
           <ListItemAvatar>
             <Avatar alt="Avatar" src={item.photos[0]} />
           </ListItemAvatar>
-          <ListItemText
-            primary={item.name}
-            secondary={
-              <Fragment>
-                <Typography component="span" color="textPrimary">
-                  {item.city}
-                </Typography>
-              </Fragment>
-            }
-          />
+          <div className="description">
+            <ListItemText
+              primary={item.name}
+              secondary={
+                <Fragment>
+                  <Typography component="span" color="textPrimary">
+                    {item.city}
+                  </Typography>
+                </Fragment>
+              }
+            />
+          </div>
         </ListItem>
       </div>
     </Link>
