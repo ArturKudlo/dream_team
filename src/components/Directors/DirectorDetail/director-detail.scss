@@ -1,0 +1,19 @@
+.director_detail_wrapper {
+  display: flex;   
+  margin-bottom: 140px;
+  margin: 40px 0 140px;
+
+  .left {
+    padding-left: 20px;
+  }
+
+  .right{
+    flex-grow: 1; 
+    min-height: 800px;
+  }
+}
+
+
+
+
+

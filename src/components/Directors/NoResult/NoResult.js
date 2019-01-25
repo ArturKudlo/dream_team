@@ -5,7 +5,7 @@ import './no-result.scss';
 const NoResult = props => {
   return (
     <div className="no-result">
-      {props.text}
+      {props.text || 'No result'}
     </div>
   );
 }
