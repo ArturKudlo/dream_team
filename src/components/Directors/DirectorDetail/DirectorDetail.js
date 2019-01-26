@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import DirectorPhoto from './DirectorPhoto/DirectorPhoto';
 import DirectorBiography from './DirectorBiography/DirectorBiography';
+import DirectorWorks from './DirectorWorks/DirectorWorks';
 import DirectorVideo from './DirectorVideo/DirectorVideo';
 import DirectorLocation from './DirectorLocation/DirectorLocation';
 import NoResult from '../NoResult/NoResult';
@@ -10,8 +11,6 @@ import { directorsData } from '../../../assets/data';
 import './director-detail.scss';
 
 class DirectorDetail extends Component {
-  state = {}
-
   render() {
     const id = Number(this.props.match.params.id);
     const director = directorsData.find(director => director.id === id);
@@ -28,6 +27,9 @@ class DirectorDetail extends Component {
               </div>
             </div>
             <div className="right">
+              <DirectorWorks
+                works={director.theaterWorks}
+              />
               <DirectorVideo
                 videoId={director.video}
               />

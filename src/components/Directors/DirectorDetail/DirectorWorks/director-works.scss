@@ -1,0 +1,15 @@
+.works-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .works-list-title {
+    color: gray;
+
+    .date {
+      padding-bottom: 3px;
+      padding-right: 40px;
+    }
+  }
+}
