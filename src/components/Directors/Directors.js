@@ -26,7 +26,7 @@ class Directors extends Component {
   }
 
   handleSearch = search => {
-    const filteredDirectors = this.state.artists.filter(director => director.name.toLowerCase().includes(search.toLowerCase()))
+    const filteredDirectors = this.state.directors.filter(director => director.name.toLowerCase().includes(search.toLowerCase()))
     this.setState({ filteredDirectors });
   }
 
