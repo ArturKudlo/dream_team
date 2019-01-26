@@ -23,7 +23,7 @@ const DirectorWorks = ({ works }) => {
   return (
     <div className="works-wrapper">
       <Title
-        text="Works information"
+        text="Works"
       />
       <Grid item xs={12} md={6}>
         <div className="works-list-title">

@@ -9,7 +9,7 @@ const DirectorLocation = ({ location }) => {
   return (
     <div className="location-wrapper">
       <Title
-        text="Location information"
+        text="Location"
       />
       <iframe
         className="iframe"
