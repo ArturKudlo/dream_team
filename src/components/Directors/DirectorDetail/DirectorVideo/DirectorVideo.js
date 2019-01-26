@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import ModalVideo from 'react-modal-video';
 
+import { languagesData } from '../../../../assets/languagesData';
 import Title from '../../../shared/Title/Title';
 
 import 'react-modal-video/scss/modal-video.scss';
@@ -27,13 +28,14 @@ class DirectorVideo extends Component {
   render() {
     const {
       classes,
-      videoId
+      videoId,
+      language
     } = this.props;
 
     return (
       <div className="video-wrapper">
         <Title 
-          text="Video"
+          text={languagesData[language]['VIDEO']}
         />
         <ModalVideo
           channel="youtube"
@@ -47,7 +49,7 @@ class DirectorVideo extends Component {
           className={classes.button}
           onClick={this.toggleModal.bind(null, true)}
         >
-          Watch video
+          {languagesData[language]['WATCH_VIDEO']}
         </Button>
       </div>
     )

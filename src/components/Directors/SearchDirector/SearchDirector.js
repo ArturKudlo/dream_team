@@ -23,7 +23,7 @@ class SearchDirector extends Component {
           value={this.state.value}
           id="outlined-full-width"
           style={{ margin: 8 }}
-          placeholder="Search theater directors"
+          placeholder={this.props.placeholder}
           fullWidth
           margin="normal"
           variant="outlined"

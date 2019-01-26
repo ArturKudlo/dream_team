@@ -1,11 +1,12 @@
 import React from 'react';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
+import { languagesData } from '../../../../assets/languagesData';
 import Title from '../../../shared/Title/Title';
 
 import './director-biography.scss';
 
-const DirectorBiography = ({ biography }) => {
+const DirectorBiography = ({ language, biography }) => {
   const renderDates = biography => Object.entries(biography).map((item, index) => (
     <TimelineItem
       key={index}
@@ -19,7 +20,7 @@ const DirectorBiography = ({ biography }) => {
   return (
     <div className="biography-wrapper">
       <Title
-        text="Biography"
+        text={languagesData[language]['BIOGRAPHY']}
       />
       <Timeline lineColor={'#ddd'}>
         {renderDates(biography)}

@@ -6,9 +6,9 @@ import PageTop from '../shared/PageTop/PageTop';
 import DirectorsList from './DirectorsList/DirectorsList';
 import SearchDirector from './SearchDirector/SearchDirector';
 import { directorsData } from '../../assets/data';
+import { languagesData } from '../../assets/languagesData';
 
 import './directors.scss';
-
 
 const styles = theme => ({
   title: {
@@ -26,14 +26,12 @@ class Directors extends Component {
   }
 
   handleSearch = search => {
-    const filteredDirectors = this.state.directors.filter(director => director.name.toLowerCase().includes(search.toLowerCase()))
+    const filteredDirectors = this.state.artists.filter(director => director.name.toLowerCase().includes(search.toLowerCase()))
     this.setState({ filteredDirectors });
   }
 
   handleChangePage = (event, page) => {
-    console.log(page);
     this.setState({ page });
-
   }
 
   handleChangeRowsPerPage = event => {
@@ -47,16 +45,23 @@ class Directors extends Component {
       rowsPerPage
     } = this.state;
 
-    const { classes } = this.props;
-    const directorsResult = filteredDirectors.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+    const {
+      classes,
+      language
+    } = this.props;
+
+    const directorsResult = filteredDirectors.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+    const title = languagesData[language]['BROWSE_DIRECTORS'];
+    const placeholder = languagesData[language]['SEARCH_THEATER_DIRECTORS'];
 
     return (
       <div>
         <PageTop
-          title="Browse Directors"
+          title={title}
         />
-        <div className="directors-container">
+        <div className="artists-container">
           <SearchDirector
+            placeholder={placeholder}
             handleSearch={this.handleSearch}
           />
           <DirectorsList

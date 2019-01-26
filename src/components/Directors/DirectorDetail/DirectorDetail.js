@@ -14,7 +14,11 @@ class DirectorDetail extends Component {
   state = {}
 
   render() {
-    const id = Number(this.props.match.params.id);
+    const {
+      match,
+      language
+    } = this.props;
+    const id = Number(match.params.id);
     const director = directorsData.find(director => director.id === id);
     if (!director) return <NoResult />;
 
@@ -33,15 +37,19 @@ class DirectorDetail extends Component {
               {director.name}
             </div>
             <DirectorBiography
+              language={language}
               biography={director.biography}
             />
             <DirectorWorks
+              language={language}
               works={director.theaterWorks}
             />
             <DirectorVideo
+              language={language}
               videoId={director.video}
             />
             <DirectorLocation
+              language={language}
               location={director.location}
             />
           </div>

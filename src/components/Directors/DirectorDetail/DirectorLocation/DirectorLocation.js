@@ -1,15 +1,17 @@
 import React from 'react';
 
+import { languagesData } from '../../../../assets/languagesData';
 import Title from '../../../shared/Title/Title';
 
 import './director-location.scss';
 
-const DirectorLocation = ({ location }) => {
+const DirectorLocation = ({ language, location }) => {
+  const locationText = languagesData[language]['LOCATION'];
 
   return (
     <div className="location-wrapper">
       <Title
-        text="Location"
+        text={locationText}
       />
       <iframe
         className="iframe"
@@ -20,7 +22,7 @@ const DirectorLocation = ({ location }) => {
       />
 
       <div className="location-tag">
-        <div>Location</div>
+        <div>{locationText}</div>
       </div>
 
     </div>
