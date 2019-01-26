@@ -1,0 +1,16 @@
+.works-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .works-list-title {
+    color: gray;
+
+    .date {
+      font-size: 25px;
+      padding-bottom: 3px;
+      padding-right: 40px;
+    }
+  }
+}

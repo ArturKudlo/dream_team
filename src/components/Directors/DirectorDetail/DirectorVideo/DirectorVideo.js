@@ -33,7 +33,7 @@ class DirectorVideo extends Component {
     return (
       <div className="video-wrapper">
         <Title 
-          text="Video information"
+          text="Video"
         />
         <ModalVideo
           channel="youtube"
