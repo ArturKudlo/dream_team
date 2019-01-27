@@ -7,8 +7,13 @@ import './home.scss';
 class Home extends Component {
   state = {
     directors: directorsData,
+    directorOftheDayId : this.getDirectorOftheDayId()
   }
- 
+
+  getDirectorOftheDayId() {
+    return Math.floor(Math.random() * Math.floor(directorsData.length));
+  }
+
   render() {
     return ( 
       <div>
@@ -30,10 +35,10 @@ class Home extends Component {
         <section className="home_director_of_the_day">
           <h2>Режиссер дня</h2> 
           <article>
-            <img src={this.state.directors[0].photos[0]} alt={this.state.directors[0].name}/>
-            <h3>{this.state.directors[0].name}</h3>
-            <p>{this.state.directors[0].city}</p>
-            <Link to={'/directors/' + this.state.directors[0].id} className="header-link">
+            <img src={this.state.directors[this.state.directorOftheDayId].photos[0]} alt={this.state.directors[this.state.directorOftheDayId].name}/>
+            <h3>{this.state.directors[this.state.directorOftheDayId].name}</h3>
+            <p>{this.state.directors[this.state.directorOftheDayId].city}</p>
+            <Link to={'/directors/' + this.state.directors[this.state.directorOftheDayId].id} className="header-link">
               <div>Узнать больше</div>
             </Link>
           </article>
