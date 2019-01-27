@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { directorsData } from '../../assets/data';
-import { homePageData } from '../../assets/homePageData';
 import { authors } from '../../assets/authors';
 import { languagesData } from '../../assets/languagesData';
 
@@ -31,7 +30,6 @@ const Authors = function (props) {
 class Home extends Component {
   state = {
     directors: directorsData,
-    homeData: homePageData,
     authorInfo: authors,
     directorOftheDayId : this.getDirectorOftheDayId()
   }
@@ -47,8 +45,8 @@ class Home extends Component {
       <div>
         <section className="home_informaion">
           <h1>{languagesData[language]['MAIN_HEADER']}</h1> 
-          <Information h3={languagesData[language]['HISTORY']} paragrapf={this.state.homeData[0].paragrapf}/>
-          <Information h3={languagesData[language]['THEATER_DIRECTOR']} paragrapf={this.state.homeData[1].paragrapf}/>
+          <Information h3={languagesData[language]['HISTORY']} paragrapf={languagesData[language]['HISTORY_INFO']}/>
+          <Information h3={languagesData[language]['THEATER_DIRECTOR']} paragrapf={languagesData[language]['THEATER_DIRECTOR_INFO']}/>
         </section>
         <section className="home_director_of_the_day">
           <h2>{languagesData[language]['DIREKTOR_DAY']}</h2> 
