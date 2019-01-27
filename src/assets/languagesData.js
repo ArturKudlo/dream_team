@@ -9,7 +9,13 @@ export const languagesData = {
     WORKS: 'Works',
     VIDEO: 'Video',
     WATCH_VIDEO: 'Watch video',
-    LOCATION: 'Location'
+    LOCATION: 'Location',
+    MAIN_HEADER: 'The Directors of the theatre of Belarus',
+    HISTORY: 'Little history',
+    THEATER_DIRECTOR: 'Who is a theater Director?',
+    DIREKTOR_DAY: 'The Director of the day',
+    MORE: 'Learn more',
+    AUTHOR_INFO: 'Author information'
   },
   ru: {
     HOME: 'Главная',
@@ -21,7 +27,13 @@ export const languagesData = {
     WORKS: 'Работы',
     VIDEO: 'Видео',
     WATCH_VIDEO: 'Смотреть видео',
-    LOCATION: 'Локация'
+    LOCATION: 'Локация',
+    MAIN_HEADER: 'Режиссеры театра Беларуси',
+    HISTORY: 'Немного истории',
+    THEATER_DIRECTOR: 'Кто такой режиссер театра',
+    DIREKTOR_DAY: 'Режиссер дня',
+    MORE: 'Узнать больше',
+    AUTHOR_INFO: 'Информация об авторах'
   },
   be: {
     HOME: 'Галоўная',
@@ -33,6 +45,12 @@ export const languagesData = {
     WORKS: 'Працы',
     VIDEO: 'Відэа',
     WATCH_VIDEO: 'Глядзець відэа',
-    LOCATION: 'Лакацыя'
+    LOCATION: 'Лакацыя',
+    MAIN_HEADER: 'Рэжысёры тэатра Беларусі',
+    HISTORY: 'Трохі гісторыі',
+    THEATER_DIRECTOR: 'Хто такі рэжысёр тэатра?',
+    DIREKTOR_DAY: 'Рэжысёр дня',
+    MORE: 'Пазнаць больш',
+    AUTHOR_INFO: 'Інфармацыя пра аўтараў'
   }
 }
